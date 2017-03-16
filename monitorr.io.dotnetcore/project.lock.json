@@ -4912,10 +4912,10 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vasile\\Desktop\\201apps-monitorr.dotnetcore-42b3c2d0ad87\\201apps-monitorr.dotnetcore-42b3c2d0ad87\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore.csproj",
+      "projectUniqueName": "C:\\201apps\\monitorr.io\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore.csproj",
       "projectName": "monitorr.io.dotnetcore",
-      "projectPath": "C:\\Users\\Vasile\\Desktop\\201apps-monitorr.dotnetcore-42b3c2d0ad87\\201apps-monitorr.dotnetcore-42b3c2d0ad87\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore.csproj",
-      "projectJsonPath": "C:\\Users\\Vasile\\Desktop\\201apps-monitorr.dotnetcore-42b3c2d0ad87\\201apps-monitorr.dotnetcore-42b3c2d0ad87\\monitorr.io.dotnetcore\\project.json",
+      "projectPath": "C:\\201apps\\monitorr.io\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore.csproj",
+      "projectJsonPath": "C:\\201apps\\monitorr.io\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {
