@@ -1,0 +1,1 @@
+nuget pack monitorr.io.dotnetcore.nuspec  -Properties Configuration=Staging

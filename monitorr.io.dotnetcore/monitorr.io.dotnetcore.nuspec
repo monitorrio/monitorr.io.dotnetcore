@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>monitorr.io.dotnetcore</id>
+    <version>1.0.0</version>
+    <title>monitorr.io.dotnetcore</title>
+    <authors>monitorr.io</authors>
+    <owners/>
+    <iconUrl>http://monitorr.s3.amazonaws.com/logo50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Monitor.io provider for .NET Core</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright/>
+    <tags>error logging, .net core error logging</tags>
+    <dependencies>
+      <group targetFramework="netstandard1.3">
+        <dependency id="Microsoft.AspNetCore.Http" version="1.0.0" />
+        <dependency id="System.Net.Http" version="4.1.0" />
+        <dependency id="Newtonsoft.Json" version="9.0.1" />
+        <dependency id="System.Collections.Specialized" version="4.3.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\$Configuration$\monitorr.io.core.dll" target="lib\netstandard1.3\monitorr.io.core.dll" />
+  </files>
+</package>
