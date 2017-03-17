@@ -5,7 +5,7 @@ namespace monitorr.io.core.Extensions
 {
     public static class MonitorrExtensions
     {
-        public static IApplicationBuilder Monitor(this IApplicationBuilder app, Guid logId)
+        public static IApplicationBuilder UseMonitorr(this IApplicationBuilder app, Guid logId)
         {
             return app.UseMiddleware<MonitorrMiddleware>(logId);
         }
