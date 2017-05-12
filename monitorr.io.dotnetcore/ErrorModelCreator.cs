@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using monitorr.io.core.Detection;
 using Microsoft.AspNetCore.Http;
@@ -7,7 +8,8 @@ namespace monitorr.io.core
 {
     public static class ErrorModelCreator
     {
-        public static ErrorModel Create(Guid logId, HttpContext context, Exception exception = null, bool isCustom = false)
+        public static ErrorModel Create(Guid logId, HttpContext context, Exception exception = null, 
+            bool isCustom = false, IDictionary<string, string> additionalData = null)
         {
             return new ErrorModel
             {
@@ -29,7 +31,8 @@ namespace monitorr.io.core
                 User = User(context),
                 Url = context.Request?.Path.Value,
                 Severity = GetSeverity(context.Response?.StatusCode),
-                IsCustom = isCustom
+                IsCustom = isCustom,
+                CustomData = additionalData
             };
         }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace monitorr.io.core
@@ -25,6 +26,6 @@ namespace monitorr.io.core
         public Dictionary<string, string> QueryString { get; set; }
         public Dictionary<string, string> Form { get; set; }
         public Dictionary<string, string> Cookies { get; set; }
-
+        public IDictionary<string, string> CustomData { get; set; }
     }
 }

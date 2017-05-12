@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,9 +45,10 @@ namespace monitorr.io.core
             };
         }
 
-        public async Task LogAsync(Guid logId, HttpContext context, Exception exception = null, bool isCustom = false)
+        public async Task LogAsync(Guid logId, HttpContext context, Exception exception = null,
+            bool isCustom = false, IDictionary<string, string> additionalData = null)
         {
-            var errorModel = ErrorModelCreator.Create(logId, context, exception, isCustom);
+            var errorModel = ErrorModelCreator.Create(logId, context, exception, isCustom, additionalData);
             var json = JsonConvert.SerializeObject(errorModel, _serializationSettings);
             await _httpClient.PostAsync(_postUrl, new StringContent(json, Encoding.UTF8, "application/json"));
         }
@@ -57,9 +59,10 @@ namespace monitorr.io.core
             await _httpClient.PostAsync(_postUrl, new StringContent(json, Encoding.UTF8, "application/json"));
         }
 
-        public void Log(Guid logId, HttpContext context, Exception exception, bool isCustom = false)
+        public void Log(Guid logId, HttpContext context, Exception exception,
+            bool isCustom = false, IDictionary<string, string> additionalData = null)
         {
-            var errorModel = ErrorModelCreator.Create(logId, context, exception, isCustom);
+            var errorModel = ErrorModelCreator.Create(logId, context, exception, isCustom, additionalData);
             var json = JsonConvert.SerializeObject(errorModel, _serializationSettings);
             _httpClient.PostAsync(_postUrl, new StringContent(json, Encoding.UTF8, "application/json")).Wait();
         }
