@@ -23,7 +23,7 @@ namespace monitorr.io.core
                 Form = Form(context),
                 Host = context.Request?.Host.Value,
                 ServerVariables = ServerVariables(context),
-                StatusCode = context.Response?.StatusCode,
+                StatusCode = GetStatusCode(context, exception),
                 QueryString = QueryString(context),
                 Method = context.Request?.Method,
                 LogId = logId.ToString(),
@@ -34,6 +34,16 @@ namespace monitorr.io.core
                 IsCustom = isCustom,
                 CustomData = additionalData
             };
+        }
+
+        private static int? GetStatusCode(HttpContext context, Exception exception)
+        {
+            if (exception != null)
+            {
+                return context.Response?.StatusCode < 400 ? 500 : context.Response?.StatusCode;
+            }
+
+            return context.Response?.StatusCode;
         }
 
         private static Severity GetSeverity(int? responseStatusCode)
