@@ -4908,14 +4908,14 @@
     ".NETStandard,Version=v1.3": []
   },
   "packageFolders": {
-    "C:\\Users\\Max\\.nuget\\packages\\": {}
+    "C:\\Users\\Vasile\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Monitorr\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore.csproj",
+      "projectUniqueName": "C:\\201apps\\monitorr.io\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore.csproj",
       "projectName": "monitorr.io.dotnetcore",
-      "projectPath": "C:\\Projects\\Monitorr\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore.csproj",
-      "projectJsonPath": "C:\\Projects\\Monitorr\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore\\project.json",
+      "projectPath": "C:\\201apps\\monitorr.io\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore.csproj",
+      "projectJsonPath": "C:\\201apps\\monitorr.io\\monitorr.io.dotnetcore\\monitorr.io.dotnetcore\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {
