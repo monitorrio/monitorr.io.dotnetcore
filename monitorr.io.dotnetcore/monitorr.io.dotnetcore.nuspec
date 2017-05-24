@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>monitorr.io.dotnetcore</id>
-    <version>1.0.4</version>
+    <version>1.0.3</version>
     <title>monitorr.io.dotnetcore</title>
     <authors>monitorr.io</authors>
     <owners/>
