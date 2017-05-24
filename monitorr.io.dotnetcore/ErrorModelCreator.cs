@@ -64,13 +64,8 @@ namespace monitorr.io.core
 
         private static string Browser(HttpContext context)
         {
-            var ua = context?.Request.Headers["User-Agent"];
-            if (ua.HasValue)
-            {
-                return BrowserDetection.Detect(ua);
-            }
-
-            return null;
+            var ua = context?.Request?.Headers["User-Agent"].ToString();
+            return BrowserDetection.Detect(ua);
         }
 
         private static string Message(Exception exception)
